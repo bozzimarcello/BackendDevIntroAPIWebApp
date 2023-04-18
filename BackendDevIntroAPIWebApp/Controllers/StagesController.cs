@@ -24,7 +24,8 @@ namespace BackendDevIntroAPIWebApp.Controllers
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Stage>>> GetStages()
         {
-            //return await _context.Stages.ToListAsync();
+            return await _context.Stages.ToListAsync();
+/*            
             var rng = new Random();
             return Enumerable.Range(1, 6).Select(index => new Stage
             {
@@ -52,6 +53,8 @@ namespace BackendDevIntroAPIWebApp.Controllers
                 Municipality = " "
             })
             .ToArray();
+
+            */
         }
 
         // GET: api/Stages/5
