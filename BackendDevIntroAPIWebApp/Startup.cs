@@ -39,7 +39,8 @@ namespace BackendDevIntroAPIWebApp
             });
             services.AddControllers();
             services.AddDbContext<SiriusContext>(opt =>
-                                               opt.UseInMemoryDatabase("Sirius"));
+                //opt.UseInMemoryDatabase("Sirius"));
+                opt.UseSqlServer("name=ConnectionStrings:DefaultConnection"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
